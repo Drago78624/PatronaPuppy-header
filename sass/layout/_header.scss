@@ -1,0 +1,29 @@
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0.5942752100840336) 0%,
+      rgba(2, 0, 36, 0.3925945378151261) 100%
+    ),
+    url(../imgs/hon.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.header-content {
+  width: 95%;
+  height: 70%;
+  // background-color: gray;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 500px) {
+    height: 80%;
+  }
+}

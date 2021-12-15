@@ -1,0 +1,41 @@
+.header-text {
+  width: 90%;
+  text-align: center;
+  .text {
+    font-size: 3rem;
+    font-weight: 600;
+    color: $color-dark-orange;
+    margin-bottom: 2rem;
+    animation: moveInBottom 1s ease-out 0.5s;
+    animation-fill-mode: backwards;
+
+    @media (max-width: 1140px) {
+      font-size: 2rem;
+    }
+  }
+  .primary-heading {
+    font-size: 6rem;
+    margin-bottom: 6rem;
+    span {
+      color: $color-white;
+    }
+
+    &__main {
+      display: block;
+      animation: moveInRight 1s ease-out 0.5s;
+      animation-fill-mode: backwards;
+    }
+    &__sub {
+      display: block;
+      animation: moveInLeft 1s ease-out 0.5s;
+      animation-fill-mode: backwards;
+    }
+
+    @media (max-width: 1140px) {
+      font-size: 4rem;
+    }
+    @media (max-width: 500px) {
+      font-size: 2.5rem;
+    }
+  }
+}

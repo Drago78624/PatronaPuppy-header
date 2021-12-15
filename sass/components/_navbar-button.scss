@@ -1,0 +1,35 @@
+.nav-bar__button {
+  display: none;
+
+  .btn {
+    font-size: 2rem;
+    background-color: $color-black;
+    color: $color-orange;
+    padding: 1.5rem 3rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 300ms;
+
+    &:hover {
+      //   border: 2px solid $color-black;
+      background-color: $color-orange;
+      color: $color-white;
+    }
+  }
+
+  @media (min-width: 550px) {
+    display: block;
+    margin-right: 2rem;
+  }
+
+  @media (min-width: 820px) {
+    display: none;
+  }
+
+  @media (min-width: 992px) {
+    display: block;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+  }
+}

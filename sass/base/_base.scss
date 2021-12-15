@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+  }
+  
+  html {
+    font-size: 62.5%; //1rem == 10px
+  }
+  
+  span {
+    color: $color-orange;
+  }
+  
+  body {
+    font-family: "Nunito Sans", sans-serif;
+    box-sizing: border-box;
+  }
