@@ -1,47 +1,89 @@
 @keyframes moveInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(-100px);
-    }
-    80% {
-      transform: translateX(5px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
   }
-  @keyframes moveInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(100px);
-    }
-    80% {
-      transform: translateX(-5px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  80% {
+    transform: translateX(5px);
   }
-  @keyframes moveInTop {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  @keyframes moveInBottom {
-      0% {
-        opacity: 0;
-        transform: translateY(-50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInTopDropdown {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  50%{
+    transform: translateY(5px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes heightIncrease {
+  0%{
+    opacity: 0;
+    height: 0;
+  }
+  25%{
+    height: 10vh;
+  }
+  37%{
+    height: 15vh;
+  }
+  50%{
+    height: 20vh;
+  }
+  62%{
+    height: 25vh;
+  }
+  75%{
+    height: 30vh;
+  }
+  87%{
+    height: 35vh;
+  }
+  100%{
+    opacity: 1;
+    height: 40vh;
+  }
+}

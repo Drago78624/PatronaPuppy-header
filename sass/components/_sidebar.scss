@@ -1,0 +1,35 @@
+.navbar-dropdown {
+    width: 90%;
+    background-color: $color-dark-orange;
+    position: absolute;
+    z-index: 100;
+    top: calc(10vh + 20px);
+    padding: 1rem;
+    animation: heightIncrease 300ms ease-in-out;
+    display: block;
+
+    @media (min-width: 992px){
+        display: none;
+    }
+
+    // .navbar-dropdown__options {
+    //     display: none;
+    // }
+
+    .navbar-dropdown__option {
+        .option {
+            font-size: 2rem;
+            color: $color-white;
+            line-height: 3;
+        }
+
+        .navbar-dropdown__option--menu {
+            display: none;
+            .menu-option {
+                font-size: 1.5rem;
+                line-height: 1.5;
+                color: $color-gray;
+            }
+        }
+    }
+}
