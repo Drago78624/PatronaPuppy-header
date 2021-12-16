@@ -126,6 +126,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 .nav-bar__brand .brand-logo img {
   width: 30px;
@@ -153,7 +154,7 @@ body {
   list-style: none;
   display: none;
 }
-@media (min-width: 820px) {
+@media (min-width: 992px) {
   .nav-bar .nav-bar__items .nav-bar__links {
     display: flex;
   }
@@ -163,12 +164,22 @@ body {
   margin: 0 1.2rem;
   color: #f95700ff;
   font-weight: 700;
+  cursor: pointer;
+  transition: all 200ms;
+}
+.nav-bar .nav-bar__items .nav-bar__links .nav-bar__link:hover {
+  font-size: 2.1rem;
+}
+@media (min-width: 992px) {
+  .nav-bar .nav-bar__items .nav-bar__links .nav-bar__link {
+    font-size: 1.8rem;
+  }
 }
 .nav-bar .nav-bar__items .nav-bar__hamburger {
   font-size: 2.7rem;
   color: #f95700ff;
 }
-@media (min-width: 820px) {
+@media (min-width: 992px) {
   .nav-bar .nav-bar__items .nav-bar__hamburger {
     display: none;
   }
@@ -237,7 +248,7 @@ body {
     margin-right: 2rem;
   }
 }
-@media (min-width: 820px) {
+@media (min-width: 992px) {
   .nav-bar__button {
     display: none;
   }
