@@ -165,7 +165,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 290px;
+  min-width: 250px;
   z-index: 1000;
 }
 .nav-bar__brand {
