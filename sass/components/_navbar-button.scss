@@ -13,7 +13,8 @@
 
     &:hover {
       //   border: 2px solid $color-black;
-      background-color: $color-orange;
+      // background-color: $color-orange;
+      background-image: linear-gradient(to right, rgb(249, 87, 0), rgb(248, 129, 65));
       color: $color-white;
     }
   }

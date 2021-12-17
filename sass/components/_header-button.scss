@@ -2,7 +2,8 @@
   .btn {
     &:link,
     &:visited {
-      background-color: $color-dark-orange;
+      // background-color: $color-dark-orange;
+      background-image: linear-gradient(to right, rgb(249, 87, 0), rgb(248, 129, 65));
       color: $color-white;
       padding: 1.5rem 4rem;
       font-size: 2rem;
@@ -38,7 +39,8 @@
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.199);
     }
     &::after {
-      background-color: $color-dark-orange;
+      // background-color: $color-dark-orange;
+      background-image: linear-gradient(to right, rgb(249, 87, 0), rgb(248, 129, 65));
     }
   }
 }

@@ -86,6 +86,23 @@
     height: 40vh;
   }
 }
+@keyframes optionsOpacity {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -156,6 +173,25 @@ body {
   display: none !important;
 }
 
+.u-display-none {
+  display: block !important;
+}
+
+.u-ham-menu-btn {
+  display: inline-block;
+  background-color: #181818;
+  padding: 1.5rem 2.5rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.u-color-black {
+  color: #181818;
+}
+
 .nav-bar {
   width: 100%;
   height: 10vh;
@@ -166,7 +202,9 @@ body {
   align-items: center;
   justify-content: space-between;
   min-width: 250px;
-  z-index: 1000;
+  z-index: 3000;
+  box-shadow: 0 1px 10px #181818;
+  min-height: 70px;
 }
 .nav-bar__brand {
   margin-left: 1rem;
@@ -202,6 +240,17 @@ body {
   justify-content: space-between;
   margin-right: 1.5rem;
 }
+.nav-bar .nav-bar__items .nav-bar__link:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  width: 250%;
+  height: 200%;
+  background-color: red;
+  z-index: -1;
+  position: absolute;
+  left: -80%;
+  opacity: 0;
+}
 .nav-bar .nav-bar__items .nav-bar__links {
   list-style: none;
   display: none;
@@ -212,8 +261,8 @@ body {
   }
 }
 .nav-bar .nav-bar__items .nav-bar__links .nav-bar__link {
-  font-size: 1.9rem;
-  margin: 0 1.2rem;
+  font-size: 2rem;
+  margin: 0 2.5rem;
   color: #f95700ff;
   font-weight: 700;
   cursor: pointer;
@@ -221,28 +270,30 @@ body {
   transition: all 200ms;
 }
 .nav-bar .nav-bar__items .nav-bar__links .nav-bar__link:hover {
-  font-size: 2rem;
+  font-size: 2.1rem;
+  color: #181818;
 }
 .nav-bar .nav-bar__items .nav-bar__links .nav-bar__link .dropdown {
+  width: 15rem;
   position: absolute;
   top: 150%;
-  right: -5%;
+  right: -65%;
   padding: 1rem 2rem;
-  background-color: #f05806;
+  background-image: linear-gradient(to right bottom, rgba(249, 87, 0, 0.89), rgba(248, 129, 65, 0.89));
   display: none;
   animation: moveInTopDropdown 300ms ease-out;
+  text-align: center;
 }
 .nav-bar .nav-bar__items .nav-bar__links .nav-bar__link .dropdown .option {
   display: block;
   padding: 1rem 0;
   border-bottom: 1px solid #fff;
   color: #fff;
+  padding-top: 2rem;
   font-weight: 400;
 }
-@media (min-width: 992px) {
-  .nav-bar .nav-bar__items .nav-bar__links .nav-bar__link {
-    font-size: 1.8rem;
-  }
+.nav-bar .nav-bar__items .nav-bar__links .nav-bar__link .dropdown .option:hover {
+  background-color: #fc6d20c4;
 }
 .nav-bar .nav-bar__items .nav-bar__links .nav-bar__link:hover .dropdown {
   display: block;
@@ -258,7 +309,7 @@ body {
 }
 
 .header-text .btn:link, .header-text .btn:visited {
-  background-color: #f05806;
+  background-image: linear-gradient(to right, #f95700, #f88141);
   color: #fff;
   padding: 1.5rem 4rem;
   font-size: 2rem;
@@ -294,7 +345,7 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.199);
 }
 .header-text .btn::after {
-  background-color: #f05806;
+  background-image: linear-gradient(to right, #f95700, #f88141);
 }
 
 .nav-bar__button {
@@ -311,7 +362,7 @@ body {
   transition: all 300ms;
 }
 .nav-bar__button .btn:hover {
-  background-color: #f95700ff;
+  background-image: linear-gradient(to right, #f95700, #f88141);
   color: #fff;
 }
 @media (min-width: 550px) {
@@ -335,31 +386,43 @@ body {
 
 .navbar-dropdown {
   width: 90%;
-  background-color: #f05806;
+  background-image: linear-gradient(to right bottom, rgba(249, 87, 0, 0.89), rgba(248, 129, 65, 0.89));
   position: absolute;
-  z-index: 100;
   top: calc(10vh + 20px);
-  padding: 1rem;
+  padding: 1rem 3rem;
   animation: heightIncrease 300ms ease-in-out;
   display: block;
+  border-radius: 0 0 5px 5px;
+  z-index: 2000;
+  min-width: 222px;
 }
 @media (min-width: 992px) {
   .navbar-dropdown {
     display: none;
   }
 }
-.navbar-dropdown .navbar-dropdown__option .option {
+.navbar-dropdown .navbar-dropdown__options {
+  animation: optionsOpacity 350ms ease-in-out;
+}
+.navbar-dropdown .navbar-dropdown__option .option:not(.my-collection) {
+  display: block;
   font-size: 2rem;
   color: #fff;
   line-height: 3;
 }
 .navbar-dropdown .navbar-dropdown__option .navbar-dropdown__option--menu {
   display: none;
+  padding: 1rem 2rem;
+  background-color: #e6cbcb;
+  border-radius: 5px;
+  animation: heightIncrease 200ms;
 }
 .navbar-dropdown .navbar-dropdown__option .navbar-dropdown__option--menu .menu-option {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: lightgray;
+  font-size: 2rem;
+  line-height: 2;
+  color: #f05806;
+  animation: optionsOpacity 250ms;
+  font-weight: 700;
 }
 
 .header {

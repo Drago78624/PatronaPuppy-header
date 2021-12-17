@@ -88,3 +88,51 @@
   }
 }
 
+// @keyframes heightDecrease {
+//   0%{
+//     opacity: 1;
+//     height: 40vh;
+//   }
+//   25%{
+//     height: 35vh;
+//   }
+//   37%{
+//     height: 30vh;
+//   }
+//   50%{
+//     height: 25vh;
+//   }
+//   62%{
+//     height: 20vh;
+//   }
+//   75%{
+//     height: 15vh;
+//   }
+//   87%{
+//     height: 10vh;
+//   }
+//   100%{
+//     opacity: 0;
+//     height: 0vh;
+//   }
+// }
+
+
+@keyframes optionsOpacity{
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
