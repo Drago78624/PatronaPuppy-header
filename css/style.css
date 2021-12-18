@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -169,11 +170,11 @@ body {
   }
 }
 
-.u-display-block {
-  display: none !important;
+.u-hamburger-menu-full {
+  height: 300px !important;
 }
 
-.u-display-none {
+.u-blog_dropdown-full {
   display: block !important;
 }
 
@@ -388,9 +389,8 @@ body {
   width: 90%;
   background-image: linear-gradient(to right bottom, rgba(249, 87, 0, 0.89), rgba(248, 129, 65, 0.89));
   position: absolute;
-  top: calc(10vh + 20px);
+  top: calc(10vh + 2px);
   padding: 1rem 3rem;
-  animation: heightIncrease 300ms ease-in-out;
   display: block;
   border-radius: 0 0 5px 5px;
   z-index: 2000;
@@ -403,6 +403,14 @@ body {
 }
 .navbar-dropdown .navbar-dropdown__options {
   animation: optionsOpacity 350ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: flex-start;
+  justify-content: center;
+  height: 0px;
+  transition-property: height;
+  transition-duration: 2s;
 }
 .navbar-dropdown .navbar-dropdown__option .option:not(.my-collection) {
   display: block;
