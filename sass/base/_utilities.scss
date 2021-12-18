@@ -1,22 +1,27 @@
-.u-display-block {
-    display: none !important;
-}
+// .u-display-block {
+//   display: none !important;
+// }
 
-.u-display-none {
-    display: block !important;
+// .u-display-none {
+//   display: block !important;
+// }
+.u-hamburger-menu-full {
+  height: 300px !important;
 }
-
+.u-blog_dropdown-full {
+  display: block !important;
+}
 .u-ham-menu-btn {
-    display: inline-block;
-    background-color: $color-black;
-    padding: 1.5rem 2.5rem;
-    border-radius: 5px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-    color: $color-white;
+  display: inline-block;
+  background-color: $color-black;
+  padding: 1.5rem 2.5rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: $color-white;
 }
 
 .u-color-black {
-    color: $color-black;
+  color: $color-black;
 }

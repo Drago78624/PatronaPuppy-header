@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="patrona">
   <head>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js" integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +15,7 @@
     <link rel="shortcut icon" href="imgs/faviconn.png">
     <title>Patrona Puppy</title>
   </head>
-  <body>
+  <body ng-controller="mainController">
     <header class="header">
       <div class="header-content">
         <nav class="nav-bar">
@@ -67,24 +68,18 @@
             <div class="nav-bar__button">
               <a href="#" class="btn">My Collection</a>
             </div>
-            <div class="nav-bar__hamburger"  id="hamburger">
-              <i class="far fa-bars" id="ham-icon"></i>
+            <div class="nav-bar__hamburger"  id="hamburger" ng-click="hamburger_menu=!hamburger_menu">
+              <i class="far fa-bars" id="ham-icon" ></i>
             </div>
         </nav>
-        <div class="navbar-dropdown u-display-block" id="menu">
-          <ul class="navbar-dropdown__options">
+        <div class="navbar-dropdown u-display-block" id="menu" >
+          <ul class="navbar-dropdown__options" ng-class="{'u-hamburger-menu-full': hamburger_menu}">
             <li class="navbar-dropdown__option">
               <a href="#" class="option">Home</a>
-              <!-- <ul class="navbar-dropdown__option--menu">
-                <li class="menu-option"></li>
-                <li class="menu-option">honolulu</li>
-                <li class="menu-option">honolulu</li>
-                <li class="menu-option">honolulu</li>
-              </ul> -->
             </li>
             <li class="navbar-dropdown__option">
-              <a href="#" class="option" id="blog">Breeds &plus;</a>
-              <ul class="navbar-dropdown__option--menu">
+              <a href="#" class="option" id="blog" ng-click="blog_dropdown=!blog_dropdown">Breeds &plus;</a>
+              <ul class="navbar-dropdown__option--menu" ng-class="{'u-blog_dropdown-full': blog_dropdown}">
                 <li class="menu-option">honolulu</li>
                 <li class="menu-option">honolulu</li>
                 <li class="menu-option">honolulu</li>
@@ -93,31 +88,10 @@
             </li>
             <li class="navbar-dropdown__option">
               <a href="#" class="option">Blog</a>
-              <!-- <ul class="navbar-dropdown__option--menu">
-                <li class="menu-option"></li>
-                <li class="menu-option">honolulu</li>
-                <li class="menu-option">honolulu</li>
-                <li class="menu-option">honolulu</li>
-              </ul> -->
             </li>
             <li class="navbar-dropdown__option">
               <a href="#" class="option u-ham-menu-btn my-collection">My Collection</a>
-              <!-- <ul class="navbar-dropdown__option--menu">
-                <li class="menu-option"></li>
-                <li class="menu-option">honolulu</li>
-                <li class="menu-option">honolulu</li>
-                <li class="menu-option">honolulu</li>
-              </ul> -->
             </li>
-            <!-- <li class="navbar-dropdown__option">
-              <a href="#" class="option">honolulu &plus;</a>
-              <ul class="navbar-dropdown__option--menu">
-                <li class="menu-option"></li>
-                <li class="menu-option">honolulu</li>
-                <li class="menu-option">honolulu</li>
-                <li class="menu-option">honolulu</li>
-              </ul>
-            </li> -->
           </ul>
         </div>
         <div class="header-text">
@@ -134,7 +108,6 @@
         </div>
       </div>
     </header>
-
     <script src="script/script.js"></script>
   </body>
 </html>
